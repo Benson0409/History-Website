@@ -1,0 +1,140 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: #FAFAFA;
+    color: #333;
+}
+
+/* Header */
+.site-header {
+    background-color: #F57C00;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 1rem;
+    animation: popIn 1s ease-out;
+}
+
+.logo-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Main */
+.home-main {
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 960px;
+    margin: auto;
+}
+
+.section-block {
+    background-color: #fff3e0;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease;
+}
+
+.section-block h2 {
+    color: #F57C00;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.section-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Button */
+.start-btn {
+    display: inline-block;
+    background-color: #F57C00;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #e06600;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #424242;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* RWD */
+@media (max-width: 768px) {
+    .logo-title {
+        font-size: 2rem;
+    }
+
+    .section-block {
+        padding: 1.5rem;
+    }
+
+    .start-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}

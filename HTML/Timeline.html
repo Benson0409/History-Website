@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>校史資料瀏覽｜2000–2025</title>
+    <link rel="stylesheet" href="/CSS/Timeline.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <!-- <button class="menu-toggle" onclick="toggleMenu()">☰ 選單</button> -->
+        <!-- <div class="header-top">
+            <img src="img/logo.png" alt="校史紀錄 Logo" class="logo" />
+        </div>
+        <h1 class="logo-title">校史資料瀏覽</h1>
+        <p>依主題分類，快速查找校園歷史事件</p> -->
+        <!-- <div class="nav-wrapper">
+            <nav class="nav-menu" id="mainMenu">
+                <a href="Home.html">🏠 網頁介紹</a>
+                <a href="timeline.html">📚 歷史瀏覽</a>
+                <a href="category_archive.html">📖 過往歷史</a>
+            </nav>
+        </div> -->
+        <div id="nav-placeholder"></div>
+
+        <script>
+            fetch("../function/Nav.html")  // ← 改為相對路徑
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+
+                    // 選單開關功能註冊
+                    window.toggleMenu = function () {
+                        const menu = document.getElementById("mainMenu");
+                        if (menu) {
+                            menu.classList.toggle("show");
+                        }
+                    };
+                });
+        </script>
+    </header>
+
+    <main class="timeline-main">
+        <section class="timeline-nav">
+            <label for="search-input">搜尋主題：</label>
+            <input type="text" id="search-input" placeholder="輸入關鍵字，如『啟程』、『轉變』..." oninput="filterCategories()" />
+        </section>
+
+        <section id="category-list">
+            <!-- 卡片 1 -->
+            <div class="timeline-card category-card" data-keywords="啟程 初始 建校">
+                <img src="img/category_start.jpg" alt="啟程">
+                <div class="card-content">
+                    <h3>啟程</h3>
+                    <p>探索學校初創時期的重要事件與開端。</p>
+                    <a href="category_start.html">進入主題 →</a>
+                </div>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="timeline-card category-card" data-keywords="轉變 發展 改革">
+                <img src="img/category_change.jpg" alt="轉變">
+                <div class="card-content">
+                    <h3>轉變</h3>
+                    <p>記錄重大改革、制度變遷與教學方式演進的歷程。</p>
+                    <a href="category_change.html">進入主題 →</a>
+                </div>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="timeline-card category-card" data-keywords="榮耀 比賽 獲獎 成就">
+                <img src="img/category_glory.jpg" alt="榮耀">
+                <div class="card-content">
+                    <h3>榮耀</h3>
+                    <p>展示學生與師長在各領域的卓越表現與獲獎記錄。</p>
+                    <a href="category_glory.html">進入主題 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 校史紀錄小組 All Rights Reserved.</p>
+    </footer>
+
+    <button id="back-to-top" onclick="scrollToTop()">↑ 回頂部</button>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            menu.classList.toggle('show');
+        }
+
+        function filterCategories() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.category-card');
+            cards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords');
+                if (!input || keywords.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const btn = document.getElementById("back-to-top");
+        window.onscroll = () => {
+            btn.style.display = window.scrollY > 300 ? "block" : "none";
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</body>
+
+</html>
