@@ -9,8 +9,21 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     background-color: #FAFAFA;
     color: #333;
+    display: flex;
+    /* 使用 Flexbox 佈局 */
+    flex-direction: column;
+    /* 垂直排列子元素 */
+    min-height: 100vh;
+    /* 確保 body 至少佔滿整個視窗的高度 */
 }
 
+/* 確保主要的內容區可以彈性伸展 */
+.home-main,
+.timeline-main,
+.detail-container {
+    flex-grow: 1;
+    /* 讓內容區塊彈性成長，將 footer 推到最下方 */
+}
 /* Header & Navigation */
 .site-header {
     background-color: #F57C00;
@@ -164,6 +177,8 @@ body {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+    margin-top: auto;
+    /* 將 footer 推到 Flexbox 容器的底部 */
 }
 
 /* 回頂部按鈕 */

@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const theme = urlParams.get('theme'); // 從 URL 獲取主題名稱
-
+    const theme = urlParams.get('theme');
     const detailPageTitle = document.getElementById('detail-page-title');
     const timelineContent = document.getElementById('timeline-content');
 
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // 載入 JSON 數據
     fetch('../Data/history_data.json')
         .then(response => {
             if (!response.ok) {
@@ -23,16 +21,45 @@ document.addEventListener('DOMContentLoaded', () => {
             const themeData = data[theme];
 
             if (themeData) {
-                detailPageTitle.textContent = `${theme}｜主題詳細頁`; // 設定動態標題
-
-                // 清空現有內容
+                detailPageTitle.textContent = `${theme}｜主題詳細頁`;
                 timelineContent.innerHTML = '';
 
-                // 動態生成時間軸條目
                 themeData.forEach((entry, index) => {
-                    const entryId = `entry-${entry.year}-${index}`; // 為每個條目創建唯一ID
+                    const entryId = `entry-${theme}-${index}`;
                     const timelineEntryDiv = document.createElement('div');
                     timelineEntryDiv.className = 'timeline-entry fade-in';
+
+                    let mainImageHTML = '';
+                    let officialDocsHTML = '';
+                    const allImages = [];
+
+                    // 將所有 image 相關欄位（image, image2, image3...）都收集起來
+                    let imageKeyIndex = 1;
+                    while (entry.hasOwnProperty(`image${imageKeyIndex > 1 ? imageKeyIndex : ''}`)) {
+                        allImages.push(entry[`image${imageKeyIndex > 1 ? imageKeyIndex : ''}`]);
+                        imageKeyIndex++;
+                    }
+
+                    if (allImages.length > 0) {
+                        mainImageHTML = `<img src="${allImages[0]}" alt="校史圖像 ${entry.year}" class="main-image">`;
+
+                        // 如果有額外的照片（image2, image3...），則建立公文區塊
+                        if (allImages.length > 1) {
+                            const docsImages = allImages.slice(1).map(docPath =>
+                                `<img src="${docPath}" alt="公文照片">`
+                            ).join('');
+
+                            officialDocsHTML = `
+                                <div class="official-docs-toggle" onclick="toggleOfficialDocs('${entryId}-docs')">
+                                    <span class="docs-toggle-text">相關公文查閱</span>
+                                    <span class="docs-toggle-icon">▼</span>
+                                </div>
+                                <div class="official-docs-content" id="${entryId}-docs">
+                                    ${docsImages}
+                                </div>
+                            `;
+                        }
+                    }
 
                     timelineEntryDiv.innerHTML = `
                         <div class="entry-toggle" onclick="toggleDetail('${entryId}')">
@@ -46,19 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="entry-detail" id="${entryId}">
                             <p>${entry.detail_content}</p>
-                            <img src="${entry.image}" alt="校史圖像 ${entry.year}" style="width:100%;margin-top:1rem;border-radius:8px;">
+                            ${mainImageHTML}
+                            ${officialDocsHTML}
                         </div>
                     `;
                     timelineContent.appendChild(timelineEntryDiv);
                 });
-
-                // 觸發滾動動畫（如果需要）
-                // 這裡可以選擇性地在所有內容載入後觸發 fade-in 動畫
-                // 如果你的 Detail.js 已經處理了滾動時的 fade-in，這裡可能不需要額外處理
-                // document.querySelectorAll(".fade-in").forEach(el => {
-                //   el.classList.add("visible");
-                // });
-
             } else {
                 detailPageTitle.textContent = "主題未找到";
                 timelineContent.innerHTML = `<p style='text-align: center; margin-top: 2rem;'>抱歉，找不到「${theme}」主題的資料。</p>`;
@@ -70,3 +90,23 @@ document.addEventListener('DOMContentLoaded', () => {
             timelineContent.innerHTML = "<p style='text-align: center; margin-top: 2rem; color: red;'>載入歷史資料時發生錯誤，請稍後再試。</p>";
         });
 });
+
+function toggleOfficialDocs(id) {
+    const el = document.getElementById(id);
+    const toggleIcon = el.previousElementSibling.querySelector('.docs-toggle-icon');
+    if (el && toggleIcon) {
+        const willShow = !el.classList.contains('show');
+        el.classList.toggle('show');
+
+        // 檢查是否是展開
+        if (willShow) {
+            toggleIcon.textContent = '▲';
+            // 延遲滾動，讓動畫有時間完成
+            setTimeout(() => {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500); // 這裡的延遲時間與 CSS 過渡時間一致
+        } else {
+            toggleIcon.textContent = '▼';
+        }
+    }
+}
