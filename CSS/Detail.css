@@ -120,10 +120,14 @@ body {
     padding: 0;
     margin-top: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
+/* 修正: 移除 .entry-detail.show 類別的 max-height，讓它由 JS 動態設定 */
 .entry-detail.show {
-    max-height: 800px;
     opacity: 1;
     transform: scaleY(1);
     padding: 1.5rem;
@@ -139,7 +143,16 @@ body {
     display: block;
 }
 
-/* --- 公文照片區塊修正 --- */
+/* 確保圖片註解在圖片下方 */
+.image-caption {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- 公文照片區塊最終修正 --- */
 .official-docs-toggle {
     display: flex;
     align-items: center;
@@ -172,36 +185,36 @@ body {
     overflow: hidden;
     padding: 0;
     opacity: 0;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease;
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
     border-left: 3px solid #ccc;
     margin-top: 0.5rem;
     text-align: center;
-    /* 修正: 讓內部元素可以置中 */
 }
 
+/* 修正: 移除 .official-docs-content.show 類別的 max-height，讓它由 JS 動態設定 */
 .official-docs-content.show {
-    max-height: 1000px;
     padding: 15px;
     opacity: 1;
 }
 
 .official-docs-content img {
     max-width: 95%;
-    /* 修正: 確保照片不超過父容器，並預留邊距 */
     height: auto;
     border-radius: 4px;
     margin-bottom: 1rem;
     display: block;
-    /* 修正: 讓照片可以獨佔一行並置中 */
     margin-left: auto;
-    /* 修正: 實現水平置中 */
     margin-right: auto;
-    /* 修正: 實現水平置中 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .official-docs-content img:not(:last-child) {
     margin-bottom: 1rem;
+}
+
+.doc-item {
+    min-height: 0;
+    overflow: hidden;
 }
 
 /* 響應式調整 */

@@ -5,45 +5,51 @@
       "summary_title": "本校改名",
       "summary_content": "本校自8月1日起改名為「國立臺北教育大學」，莊淇銘校長接篆視事，張玉成校長功成身退",
       "detail_content": "張玉成校長勉勵畢業生：態度決定程度、格局決定結局，步出校園的腳步要更堅定、更有自信！",
-      "image": "../img/A1揭牌.jpg",
-      "image2": "../img/A2交接.jpg"
+      "image": ["../img/A1揭牌.jpg","../img/A1揭牌.jpg"],
+      "image2": "../img/A2交接.jpg",
+      "image_caption": ["校名變更記者會主照片", "校名變更典禮公文照片"]
     },
     {
       "year": "2005.10.1",
       "summary_title": "「文教法律研究所」成立",
       "summary_content": "全國第一所「文教法律研究所」成立。",
       "detail_content": "全國第一所「文教法律研究所」成立，結合文化、教育及法律等學術資源，培養國家未來所需要法律人材。",
-      "image": "../img/B1文教法所創所.jpg"
+      "image": ["../img/B1文教法所創所.jpg"],
+      "image_caption": []
     },
     {
       "year": "2006.2.17",
       "summary_title": "成立「華語文中心」",
       "summary_content": "國北教大華語文中心的華語教學，有潛力與企圖心做到最好",
       "detail_content": "為培養學生多樣的第二專長，以提升學生未來就業的競爭力，並掌握世界華語文熱潮及師資需求，本校成立「華語文中心」。",
-      "image": "../img/C3華語文中心.jpg"
+      "image": ["../img/C3華語文中心.jpg"],
+      "image_caption": []
     },
     {
       "year": "2006.10",
       "summary_title": "引進美國大都會美術館藝術作品",
       "summary_content": "引進美國大都會美術館藝術作品，95年成功佈展",
       "detail_content": "為引進美國大都會美術館藝術作品，本校於93年10月策劃醞釀借展計畫，並於95年成功佈展；一百多年來本校一直雄佔臺灣藝術人才領域之鰲頭。",
-      "image": "../img/D1大都會美術館展場現場.jpg",
-      "image2": "../img/D2羅主任與大都會美術館人員確認作品.jpg"
+      "image": ["../img/D1大都會美術館展場現場.jpg"],
+      "image2": "../img/D2羅主任與大都會美術館人員確認作品.jpg",
+      "image_caption": []
     },
     {
       "year": "2007.12.5",
       "summary_title": "連慶111~112周年校慶",
       "summary_content": "釐清創校源起、界定校史爭議",
       "detail_content": "創舉連慶111~112周年校慶，釐清創校源起、界定校史爭議：無論是台籍或日籍的老校友回來為母校慶生，先後提起本校歷史應始自日治第一年-1985年的芝山巖「國語學堂」；證諸本校校歌，開頭就是「芝山鍾靈秀，東海智波揚」，因此，經過一翻查考，本校將2007年校慶訂為112周年。",
-      "image": "../img/E3慶祝111-112周年校慶茶會.jpg",
-      "image2": "../img/E4創校111-112周年校慶暨96學年運動會.jpg"
+      "image": ["../img/E3慶祝111-112周年校慶茶會.jpg"],
+      "image2": "../img/E4創校111-112周年校慶暨96學年運動會.jpg",
+      "image_caption": []
     },
     {
       "year": "2008.4.29",
       "summary_title": "深具歷史及建築風貌特色價值的本校大禮堂。",
       "summary_content": "深具歷史及建築風貌特色價值的經典建築物--本校大禮堂。",
       "detail_content": "臺北市政府市政會議通過-本校大禮堂「深具歷史及建築風貌特色價值的經典建築物」指定為臺北市第142處市定古蹟。",
-      "image": "../img/F1.jpg"
+      "image": ["../img/F1.jpg"],
+      "image_caption": []
     }
   ],
   "轉變": [
@@ -52,124 +58,137 @@
       "summary_title": "國立大學新卸任校長聯合交接典禮",
       "summary_content": "新校長上任，勵志創新",
       "detail_content": "林新發教授接任本校校長，擘畫優質、創新、具競爭力藍圖~",
-      "image": "../img/G1.jpg"
+      "image": ["../img/G1.jpg"],
+      "image_caption": []
     },
     {
       "year": "2009.2.27",
       "summary_title": "新建綜合教學大樓及游泳池",
       "summary_content": "新建綜合教學大樓及游泳池，提升校園環境",
       "detail_content": "「綜合教學大樓及游泳池新建工程」開工典禮暨動土儀式。",
-       "image": "../img/H1.jpg",
-      "image2": "../img/H2新建工程開工典禮.jpg"
-     
+      "image": ["../img/H1.jpg"],
+      "image2": "../img/H2新建工程開工典禮.jpg",
+      "image_caption": []
     },
     {
       "year": "2010.5.28-6.1",
       "summary_title": "「2010生命教育與健康促進國際學術研討會」",
       "summary_content": "善生與善終，讓生命意義無限延伸。",
       "detail_content": "「2010生命教育與健康促進國際學術研討會」於本校國際會議廳及學生活動中心舉行，共分5個場次，參與人數超過800人次，計有來自美國、加拿大、中國、香港、澳門及台灣各地學者與實務工作者共同與會，將善生與善終的主題發揮得淋漓盡致，並引發後續學習研討的動機，讓生命意義無限延伸。",
-      "image": "../img/H1.jpg"
+      "image": ["../img/H1.jpg"],
+      "image_caption": []
     },
-      {
+    {
       "year": "2011.1",
       "summary_title": "「綜合教學大樓及游泳池館」完工啟用",
       "summary_content": "12月13日慶祝本校116週年校慶-篤行樓揭牌啟用。",
       "detail_content": "「2010生命教100年3月本校「綜合教學大樓及游泳池館」完工啟用及12月13日慶祝本校116週年校慶-篤行樓揭牌啟用。",
-      "image": "../img/K1新大樓綜合大樓.jpg",
-     "image2": "../img/K2-1新建大樓全貌.jpg",
-      "image3": "../img/K2-2泳健館.jpg"
+      "image": ["../img/K1新大樓綜合大樓.jpg"],
+      "image2": "../img/K2-1新建大樓全貌.jpg",
+      "image3": "../img/K2-2泳健館.jpg",
+      "image_caption": []
     },
-      {
+    {
       "year": "2012.8.1",
       "summary_title": "張新仁教授接任本校校長",
       "summary_content": "校長誓當理念、共識、理想及資源開拓者。",
       "detail_content": "張新仁教授接任本校校長，誓當理念前瞻者、共識溝通者、理想實踐者及資源開拓者~",
-      "image": "../img/L1.jpg"
+      "image": ["../img/L1.jpg"],
+      "image_caption": []
     },
-     {
+    {
       "year": "2013.12.1",
       "summary_title": "北師一一八、校友回娘家",
       "summary_content": "一同見證「校史館」的正式揭幕啟用",
       "detail_content": "廣邀各界校友「回娘家」一同見證「校史館」的正式揭幕啟用。",
-      "image": "../img/N1-1.jpg",
+      "image": ["../img/N1-1.jpg"],
       "image2": "../img/N1.jpg",
-      "image3": "../img/N4校史文物展.jpg"
+      "image3": "../img/N4校史文物展.jpg",
+      "image_caption": []
     },
     {
       "year": "2014.1",
       "summary_title": "本校創校第一金：體育系文姿云勇奪亞運空手道金牌",
       "summary_content": "體育系文姿云勇奪亞運空手道金牌，為本校創校119年第一位獲此殊榮的運動員",
       "detail_content": "文姿云同學締造本校創校第一金殊榮，本校師長一同豎起大姆指為文姿云喝采！",
-      "image": "../img/change_2018.jpg"
+      "image": ["../img/change_2018.jpg"],
+      "image_caption": []
     },
-      {
+    {
       "year": "2014.1",
       "summary_title": "芝山親善大使首次站上國慶大會舞臺",
       "summary_content": "本校芝山親善大使首次站上國慶大會舞臺，擔任103年中華民國國慶大典禮賓人員。",
       "detail_content": "擔任服務工作的國慶金釵和金帥，一字排開展現自信儀態。",
-      "image": "../img/O3.jpg"
+      "image": ["../img/O3.jpg"],
+      "image_caption": []
     },
-     {
+    {
       "year": "2014.12.22",
       "summary_title": "弦歌揚光、心靈迴響~",
       "summary_content": "「校史文物暨師資培育」檔案特展",
       "detail_content": "以沿著時間脈絡演變的師資培育歷程，及探究隨著校歌演進的師資培育歷史，回顧畢業校友在校的生活點滴。",
-      "image": "../img/Q2本校師長觀展合影.jpg",
-      "image2": "../img/Q3特展海報.jpg"
+      "image": ["../img/Q2本校師長觀展合影.jpg"],
+      "image2": "../img/Q3特展海報.jpg",
+      "image_caption": []
     },
-      {
+    {
       "year": "2014.12.26",
       "summary_title": "舉辦「第十一屆世界華語文教學研討會」",
       "summary_content": "「本校人文藝術學院語文與創作學系與世界華語文學會共同舉辦「第十一屆世界華語文教學研討會」，更榮幸邀請到馬英九總統親臨開場致詞。",
       "detail_content": "期盼華語文教學能跨大深化，將中華文化深植在世界的文化地位。三日的研討會吸引很多在海外工作的華語文教師報名，一同回台參與此項盛會。",
-      "image": "../img/R1.jpg",
-      "image2": "../img/R3研討會現場.jpg"
+      "image": ["../img/R1.jpg"],
+      "image2": "../img/R3研討會現場.jpg",
+      "image_caption": []
     },
-      {
+    {
       "year": "2015.12.5",
       "summary_title": "「榮耀雙甲子、再創新高峰」",
       "summary_content": "「榮耀雙甲子、再創新高峰」校慶鳴鐘儀式暨慶祝大會",
       "detail_content": "本校自西元1895年創校迄今已120年，是國內歷史最為悠久的大專院校之一，兩甲子以來培育了許多優秀人才，本校期盼能傳承優良基礎，再創嶄新局面。",
-      "image": "../img/S4鐘樓合照.jpg"
+      "image": ["../img/S4鐘樓合照.jpg"],
+      "image_caption": []
     },
-       {
+    {
       "year": "2015.11.23-12.11",
       "summary_title": "「紅‧二甲子--國立臺北教育大學建築檔案特展」",
       "summary_content": "以學校歷史為經、建築檔案為緯",
       "detail_content": "本檔展運用「紅」呈現校舍的紅磚意象，以學校歷史為經、建築檔案為緯，並以校舍建築的風貌演變為主軸貫穿展覽。",
-      "image": "../img/T1.jpg",
+      "image": ["../img/T1.jpg"],
       "image2": "../img/T3.jpg",
-      "image3": "../img/T6特展海報.jpg"
+      "image3": "../img/T6特展海報.jpg",
+      "image_caption": []
     },
-       {
+    {
       "year": "2016.8.12",
       "summary_title": "本校創全國之先設立「東協人力教育中心」",
       "summary_content": "培育東協地區教育、企業管理人才",
       "detail_content": "未來將成為東協地區與臺灣相互共生互利的整合平臺，致力於提升高等教育人才就業競爭力、強化學習東協語文能力，以及作為東協企業管理人才培育之基地。",
-      "image": "../img/U1.jpg"
+      "image": ["../img/U1.jpg"],
+      "image_caption": []
     },
-        {
+    {
       "year": "2017.11.29-12.5",
       "summary_title": "「師學探源-百年樹人‧師培典範」",
       "summary_content": "臺灣北中南師範校院檔案聯展：三校聯展",
       "detail_content": "攜手探尋師學百年足跡。感懷淵遠流長師範榮耀故事…",
-      "image": "../img/V4聯展海報.jpg",
+      "image": ["../img/V4聯展海報.jpg"],
       "image2": "../img/V5聯展現場.jpg",
-      "image3": "../img/V6莊校長請上海檔案局林處長前來參觀.jpg"
+      "image3": "../img/V6莊校長請上海檔案局林處長前來參觀.jpg",
+      "image_caption": []
     },
-         {
+    {
       "year": "2018.7",
       "summary_title": "「薪火相傳，作育英才",
       "summary_content": "國立臺北教育大學校徽演進史",
       "detail_content": "本校自日治時期創校至今，校徽歷經5次變革，總計共有6個樣式~",
-      "image": "../img/W1.jpg",
+      "image": ["../img/W1.jpg"],
       "image2": "../img/W2.jpg",
       "image3": "../img/W3.jpg",
       "image4": "../img/W4.jpg",
       "image5": "../img/W5.jpg",
-      "image6": "../img/W6.jpg"
+      "image6": "../img/W6.jpg",
+      "image_caption": []
     }
-    
   ],
   "榮耀": [
     {
@@ -177,174 +196,194 @@
       "summary_title": "【育才、傳承、創新】再創北師榮耀~",
       "summary_content": "校慶暨「北師校友育才基金捐款芳名牆」落成揭幕典禮",
       "detail_content": "為了感恩眾多捐款人積沙成塔的愛心募款高達1,500多萬，使本校申請教育部107年高教深耕計畫「提升高教公共性、完善弱勢學生輔導機制」時獲最高額配合款500萬元，並讓全校師生銘記這具有深遠意涵的捐款活動，將捐款1萬元以上的芳名銘刻其上。",
-      "image": "../img/X1.jpg",
-      "image2": "../img/X4.jpg"
+      "image": ["../img/X1.jpg"],
+      "image2": "../img/X4.jpg",
+      "image_caption": []
     },
     {
       "year": "2019.11.18-11.21",
       "summary_title": "124週年校慶特展「中繼站」-傑出校友學籍簿暨校史檔案展",
       "summary_content": "歷史不可抹滅，文化必須傳承，用展覽來講述歷史，讓檔案來說明見證。",
       "detail_content": "本次校慶之檔案展係融入學生巧思與互動遊戲，期許吸引年輕學子願意主動更加了解我們的母校，以校為榮，激勵日後學校以我為榮。",
-      "image": "../img/Y2.jpg",
+      "image": ["../img/Y2.jpg"],
       "image2": "../img/Y3校名變更公文陳展.jpg",
       "image3": "../img/Y4.jpg",
-      "image4": "../img/Y6.jpg"
+      "image4": "../img/Y6.jpg",
+      "image_caption": []
     },
     {
       "year": "2020.1.30",
       "summary_title": "疫情來襲，嚴陣以待",
       "summary_content": "新冠疫情來襲，攜手防疫",
       "detail_content": "因應新冠疫情，本校全面啟動防疫機制",
-      "image": "../img/Z2.jpg",
-      "image2": "../img/Z3.jpg"
+      "image": ["../img/Z2.jpg"],
+      "image2": "../img/Z3.jpg",
+      "image_caption": []
     },
-      {
+    {
       "year": "2020.6.3",
       "summary_title": "賀！臺灣唯一！本校連續兩年入圍英國泰晤士報。",
       "summary_content": "賀！臺灣唯一連續兩年入圍英國泰晤士報亞洲高等教育最佳教學與學習策略獎。",
       "detail_content": "2019亞洲大學最佳教學與學習策略入圍獎狀。",
-      "image": "../img/Ab1.jpg",
+      "image": ["../img/Ab1.jpg"],
       "image2": "../img/Ab2.jpg",
-      "image3": "../img/Ab3.jpg"
+      "image3": "../img/Ab3.jpg",
+      "image_caption": []
     },
-     {
+    {
       "year": "2020.6.14",
       "summary_title": "國北教大圖書館重新開幕，貴賓蒞臨剪彩",
       "summary_content": "圖書館空間大改造，首創臺灣圖書、資訊與藝術三結合，採「使用者中心」國際新趨勢",
       "detail_content": "億光董事長葉寅夫支持其夫人簡文秀教授回饋母校，自2013年起捐贈本校圖書館LED燈，提供學弟妹舒適的閱讀環境，也象徵著為本校點亮了充滿希望的明燈。",
-      "image": "../img/Aa1.jpg",
-      "image2": "../img/Aa2.jpg"
+      "image": ["../img/Aa1.jpg"],
+      "image2": "../img/Aa2.jpg",
+      "image_caption": []
     },
     {
       "year": "2020.8.3",
       "summary_title": "本校新任校長就任典禮。",
       "summary_content": "本校新任校長陳慶和教授就任暨一級主管佈達典禮。",
       "detail_content": "本校新任校長陳慶和教授在教育部潘文忠部長的監交下由前校長張新仁教授手中接過學校印信。",
-       "image": "../img/Ac6.jpg"
+      "image": ["../img/Ac6.jpg"],
+      "image_caption": []
     },
-      {
+    {
       "year": "2020.12.22",
       "summary_title": "「不朽的青春-臺灣美術再發現」",
       "summary_content": "蔡英文總統親臨「不朽的青春-臺灣美術再發現」展覽",
       "detail_content": "蔡英文總統在陳慶和校長陪同下，聆聽日本修復師森純一先生解說修復《少女》胸象的心得",
-        "image": "../img/Ad1.jpg",
+      "image": ["../img/Ad1.jpg"],
       "image2": "../img/Ad3.jpg",
-      "image3": "../img/Ad7.jpg"
+      "image3": "../img/Ad7.jpg",
+      "image_caption": []
     },
-        {
+    {
       "year": "2020.12.30",
       "summary_title": "「一架鋼琴譜奏一段校史情緣」",
       "summary_content": "「一架鋼琴譜奏一段校史情緣」說明牌揭幕儀式。",
       "detail_content": "本校學術及行政主管應邀出席觀禮，與陳慶和校長及胡為真資政合影留念。",
-      "image": "../img/Ae2.jpg",
-      "image2": "../img/Ae3.jpg"
+      "image": ["../img/Ae2.jpg"],
+      "image2": "../img/Ae3.jpg",
+      "image_caption": []
     },
-           {
+    {
       "year": "2020.12.30",
       "summary_title": "本校男子甲組排球隊勇奪校史大專盃排球一級首冠。",
       "summary_content": "十年磨一劍、逆轉賽事",
       "detail_content": "本校男排一舉奪冠，於場中接受歡呼",
-      "image": "../img/Ag3.jpg"
+      "image": ["../img/Ag3.jpg"],
+      "image_caption": []
     },
-        {
+    {
       "year": "2021.8.25",
       "summary_title": "「卓越隆遠講堂」掛牌",
       "summary_content": "隆遠集團莊子華董事長慨捐新臺幣800萬元挹注本校創新永續發展",
       "detail_content": "期盼國北教大培育出以莊董事長為榜樣的卓越領袖人才，更盼莊董事長的仁風義舉持續澤被國北教大，支持國北教大「創新永續」及「隆盛久遠」。",
-      "image": "../img/Ah1.jpg",
+      "image": ["../img/Ah1.jpg"],
       "image2": "../img/Ah2.jpg",
-      "image3": "../img/Ah3.jpg"
+      "image3": "../img/Ah3.jpg",
+      "image_caption": []
     },
-        {
+    {
       "year": "2021.11.22",
       "summary_title": "若竹希冀慈善懷，菁英學苑樂育才",
       "summary_content": "國際知名聲樂家，也是本校第一屆傑出校友的簡文秀教授，她是LED界護國神山億光電子葉寅夫董事長的夫人。",
       "detail_content": "為支持母校培育菁英學子及為國家社會培育兼具專業能力與品格的頂尖人才，捐贈新臺幣2000萬元於校創設「若竹菁英學苑」。",
-      "image": "../img/Ai1.jpg",
-      "image2": "../img/Ai4.jpg"
+      "image": ["../img/Ai1.jpg"],
+      "image2": "../img/Ai4.jpg",
+      "image_caption": []
     },
-     {
+    {
       "year": "2023.3.3",
       "summary_title": "大浦精一校長家族來訪，再締校史研究交流佳話",
       "summary_content": "訪本校參觀校史館，見證歷史的演進。",
       "detail_content": "現年92歲的大浦武彥教授携家族中兒孫輩來臺重遊兒時舊地，並訪本校參觀校史館，追尋父親昔日足跡，並見證歷史的演進。",
-        "image": "../img/Ap1.jpg",
+      "image": ["../img/Ap1.jpg"],
       "image2": "../img/Ap2.jpg",
-      "image3": "../img/Ap4.jpg"
+      "image3": "../img/Ap4.jpg",
+      "image_caption": []
     },
-      {
+    {
       "year": "2022.3.14",
       "summary_title": "蔡英文總統親臨「光-臺灣文化的啟蒙與自覺」展覽。",
       "summary_content": "北師美術館展出「光-臺灣文化的啟蒙與自覺」",
       "detail_content": "北師美術館展出「光-臺灣文化的啟蒙與自覺」慶賀本校126週年校慶。",
-      "image": "../img/Ak1.jpg",
+      "image": ["../img/Ak1.jpg"],
       "image2": "../img/Ak2.jpg",
       "image3": "../img/Ak5.jpg",
-      "image4": "../img/Ak6.jpg"
+      "image4": "../img/Ak6.jpg",
+      "image_caption": []
     },
-         {
+    {
       "year": "2022.3.28",
       "summary_title": "賀！本校榮獲「111年臺灣學術資源影響力」學位論文開放獎",
       "summary_content": "賀！本校榮獲「111年臺灣學術資源影響力」學位論文開放獎",
       "detail_content": "恭喜本校榮獲由國家圖書館頒發之「111年臺灣學術資源影響力」學位論文開放獎殊榮，表彰本校在推動學位論文開放、提升學術資源可近性與影響力方面的傑出表現。",
-      "image": "../img/Am1.jpg"
+      "image": ["../img/Am1.jpg"],
+      "image_caption": []
     },
-        {
+    {
       "year": "2022.3.29",
       "summary_title": "敦愛篤行心之所向，開幕揭牌芳蘭諮商",
       "summary_content": "本校心理諮商暨健康促進研究中心設立「芳蘭心理諮商所」",
       "detail_content": "本校心理諮商暨健康促進研究中心設立「芳蘭心理諮商所」，獲得臺北市政府衛生局核發開業執照，提升成為區域級的諮商中心。",
-      "image": "../img/Al3.jpg",
-      "image2": "../img/Al4.jpg"
+      "image": ["../img/Al3.jpg"],
+      "image2": "../img/Al4.jpg",
+      "image_caption": []
     },
-      {
+    {
       "year": "2023.4",
       "summary_title": "臺灣紀錄片登上國際舞臺！《有一天我會回家》榮耀登場",
       "summary_content": "由本校陳慶和校長擔任製片、數位科技學系楊孟哲教授帶領師生團隊赴西伯利亞拍攝之紀錄片榮登國際舞臺",
       "detail_content": "《有一天我會回家》榮獲委內瑞拉五大洲國際電影最佳紀錄片、特別提名電影長片、特別提名原創配樂獎等三項獎項。",
-      "image": "../img/Aq1.jpg",
+      "image": ["../img/Aq1.jpg"],
       "image2": "../img/Aq5.jpg",
-      "image3": "../img/Aq7.jpg"
+      "image3": "../img/Aq7.jpg",
+      "image_caption": []
     },
     {
       "year": "2023.5.21",
       "summary_title": "勇奪大專合球錦標二連霸，創隊史新紀錄！",
       "summary_content": "國北合球主場優勢，勇奪大專合球錦標二連霸，創隊史新紀錄！",
       "detail_content": "發揮主場優勢，全隊齊心協力、表現出色，成功衛冕冠軍，達成二連霸佳績，締造隊史新頁！",
-      "image": "../img/Ar1.jpg"
+      "image": ["../img/Ar1.jpg"],
+      "image_caption": []
     },
-        {
+    {
       "year": "2023.7",
       "summary_title": "跨越三世紀的故事~老照片說故事，風華再現",
       "summary_content": "為配合本校校慶及國家檔管局舉辦各項檔案推廣活動進行整合行銷宣傳，於2023年7月完成「線上檔案展」！",
       "detail_content": "藉由老照片細說故事來完成1895至2005年間以立基、宏業、薪傳、茁長、昂首、展翼等六個階段的資料陳展設計",
-      "image": "../img/As1.jpg",
+      "image": ["../img/As1.jpg"],
       "image2": "../img/As2.jpg",
-      "image3": "../img/As3.jpg"
+      "image3": "../img/As3.jpg",
+      "image_caption": []
     },
     {
       "year": "2023.12",
       "summary_title": "本校歡慶創校128週年校慶",
       "summary_content": "校長陳慶和成功連任後首度公開致詞，期許與全校師生共同努力持續推動國北教大創新轉型發展。",
       "detail_content": "陳慶和校長於校慶大會中致詞期許與全體師生同仁再次齊心協力，共創佳績。",
-      "image": "../img/At1.jpg"
+      "image": ["../img/At1.jpg"],
+      "image_caption": []
     },
-      {
+    {
       "year": "2024.4.26",
       "summary_title": "賀！本校期刊獲國圖「臺灣學術資源能量風貌報告」熱門期刊傳播獎",
       "summary_content": "在國家圖書館公布之「113年臺灣學術資源影響力獎」中，本校兩大學術期刊表現亮眼",
       "detail_content": "本校《教學實踐與創新》期刊獲「熱門期刊傳播」(五年引用)教育學門第一名、《臺北教育大學語文集刊》獲得「熱門期刊傳播」(長期引用)語言學學門第三名，兩刊均榮獲佳績。",
-      "image": "../img/Au2.jpg",
-      "image2": "../img/Au3.jpg"
+      "image": ["../img/Au2.jpg"],
+      "image2": "../img/Au3.jpg",
+      "image_caption": []
     },
-     {
+    {
       "year": "2025.3.25",
       "summary_title": "讓生命延續，為球添綠！",
       "summary_content": "校慶植樹觀禮活動",
       "detail_content": "透過親手栽種綠意，傳遞永續理念，讓校園充滿生機與希望！",
-      "image": "../img/Aw1.jpg",
-      "image2": "../img/Aw2.jpg"
+      "image": ["../img/Aw1.jpg"],
+      "image2": "../img/Aw2.jpg",
+      "image_caption": []
     }
   ]
-  
 }

@@ -29,36 +29,61 @@ document.addEventListener('DOMContentLoaded', () => {
                     const timelineEntryDiv = document.createElement('div');
                     timelineEntryDiv.className = 'timeline-entry fade-in';
 
-                    let mainImageHTML = '';
+                    let mainImagesHTML = '';
                     let officialDocsHTML = '';
-                    const allImages = [];
+                    const allCaptions = entry.image_caption || [];
 
-                    // 將所有 image 相關欄位（image, image2, image3...）都收集起來
-                    let imageKeyIndex = 1;
-                    while (entry.hasOwnProperty(`image${imageKeyIndex > 1 ? imageKeyIndex : ''}`)) {
-                        allImages.push(entry[`image${imageKeyIndex > 1 ? imageKeyIndex : ''}`]);
+                    // 1. 處理正文區圖片 (來自 image 陣列或單一字串)
+                    let mainImages = [];
+                    if (entry.image) {
+                        if (Array.isArray(entry.image)) {
+                            mainImages = entry.image;
+                        } else {
+                            mainImages.push(entry.image);
+                        }
+                    }
+
+                    if (mainImages.length > 0) {
+                        mainImagesHTML = mainImages.map((imgPath, i) => {
+                            const captionText = allCaptions[i] || '';
+                            const captionHTML = captionText ? `<p class="image-caption">${captionText}</p>` : '';
+                            return `
+                                <img src="${imgPath}" alt="校史圖像 ${entry.year}-${i+1}" class="main-image">
+                                ${captionHTML}
+                            `;
+                        }).join('');
+                    }
+
+                    // 2. 處理補充區圖片 (來自 image2, image3... 欄位)
+                    const officialDocs = [];
+                    let imageKeyIndex = 2;
+                    while (entry.hasOwnProperty(`image${imageKeyIndex}`)) {
+                        officialDocs.push(entry[`image${imageKeyIndex}`]);
                         imageKeyIndex++;
                     }
 
-                    if (allImages.length > 0) {
-                        mainImageHTML = `<img src="${allImages[0]}" alt="校史圖像 ${entry.year}" class="main-image">`;
-
-                        // 如果有額外的照片（image2, image3...），則建立公文區塊
-                        if (allImages.length > 1) {
-                            const docsImages = allImages.slice(1).map(docPath =>
-                                `<img src="${docPath}" alt="公文照片">`
-                            ).join('');
-
-                            officialDocsHTML = `
-                                <div class="official-docs-toggle" onclick="toggleOfficialDocs('${entryId}-docs')">
-                                    <span class="docs-toggle-text">相關公文查閱</span>
-                                    <span class="docs-toggle-icon">▼</span>
-                                </div>
-                                <div class="official-docs-content" id="${entryId}-docs">
-                                    ${docsImages}
+                    if (officialDocs.length > 0) {
+                        const docsImagesAndCaptions = officialDocs.map((docPath, i) => {
+                            const captionIndex = mainImages.length + i;
+                            const captionText = allCaptions[captionIndex] || '';
+                            const captionHTML = captionText ? `<p class="image-caption">${captionText}</p>` : '';
+                            return `
+                                <div class="doc-item">
+                                    <img src="${docPath}" alt="公文照片">
+                                    ${captionHTML}
                                 </div>
                             `;
-                        }
+                        }).join('');
+
+                        officialDocsHTML = `
+                            <div class="official-docs-toggle" onclick="toggleOfficialDocs('${entryId}-docs')">
+                                <span class="docs-toggle-text">相關公文查閱</span>
+                                <span class="docs-toggle-icon">▼</span>
+                            </div>
+                            <div class="official-docs-content" id="${entryId}-docs">
+                                ${docsImagesAndCaptions}
+                            </div>
+                        `;
                     }
 
                     timelineEntryDiv.innerHTML = `
@@ -73,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="entry-detail" id="${entryId}">
                             <p>${entry.detail_content}</p>
-                            ${mainImageHTML}
+                            ${mainImagesHTML}
                             ${officialDocsHTML}
                         </div>
                     `;
@@ -91,22 +116,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
+// 修正後的 toggleDetail 函式，動態計算高度
+function toggleDetail(id) {
+    const el = document.getElementById(id);
+    const entry = el.closest(".timeline-entry");
+
+    if (el && entry) {
+        const willShow = !el.classList.contains("show");
+
+        if (willShow) {
+            el.style.maxHeight = 'none';
+            const scrollHeight = el.scrollHeight;
+            el.style.maxHeight = '0px';
+
+            setTimeout(() => {
+                el.style.maxHeight = scrollHeight + 'px';
+                el.classList.add("show");
+                entry.classList.add("active");
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 10);
+        } else {
+            el.style.maxHeight = '0px';
+            el.classList.remove("show");
+            entry.classList.remove("active");
+        }
+    }
+}
+
+// 修正後的 toggleOfficialDocs 函式，動態計算高度
 function toggleOfficialDocs(id) {
     const el = document.getElementById(id);
-    const toggleIcon = el.previousElementSibling.querySelector('.docs-toggle-icon');
-    if (el && toggleIcon) {
-        const willShow = !el.classList.contains('show');
-        el.classList.toggle('show');
+    const toggleButton = el.previousElementSibling;
+    const toggleIcon = toggleButton.querySelector('.docs-toggle-icon');
 
-        // 檢查是否是展開
-        if (willShow) {
-            toggleIcon.textContent = '▲';
-            // 延遲滾動，讓動畫有時間完成
-            setTimeout(() => {
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500); // 這裡的延遲時間與 CSS 過渡時間一致
-        } else {
+    if (el && toggleIcon) {
+        const isShowing = el.classList.contains('show');
+
+        if (isShowing) {
+            el.style.maxHeight = '0px';
+            el.classList.remove('show');
             toggleIcon.textContent = '▼';
+        } else {
+            el.style.maxHeight = 'none';
+            const scrollHeight = el.scrollHeight;
+            el.style.maxHeight = '0px';
+
+            setTimeout(() => {
+                el.style.maxHeight = scrollHeight + 'px';
+                el.classList.add('show');
+                toggleIcon.textContent = '▲';
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 10);
         }
     }
 }
