@@ -108,25 +108,21 @@ body {
     transform: rotate(180deg);
 }
 
-/* Entry Detail */
+/* Entry Detail (主內容區塊，無最大高度限制，無動畫) */
 .entry-detail {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transform: scaleY(0.95);
-    transition: max-height 0.8s ease-in-out, opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-    border-radius: 12px;
+    /* 移除所有動畫和限制，確保內容完整顯示 */
+    display: none;
+    /* 預設隱藏 */
     padding: 0;
     margin-top: 0;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .entry-detail.show {
-    max-height: none;
-    /* 修正: 移除 max-height 限制 */
-    opacity: 1;
-    transform: scaleY(1);
+    display: block;
+    /* 展開時直接顯示 */
     padding: 1.5rem;
     margin-top: 1rem;
 }
@@ -138,18 +134,29 @@ body {
     border-radius: 8px;
     margin-top: 1rem;
     display: block;
+    /* 確保圖片是塊級元素以實現居中 */
+    margin-left: auto;
+    /* 圖片居中 */
+    margin-right: auto;
+    /* 圖片居中 */
 }
 
-/* 確保圖片註解在圖片下方 */
+/* 確保圖片註解在圖片下方且居中 */
 .image-caption {
     font-size: 0.9rem;
     color: #555;
     text-align: center;
-    margin-top: -0.5rem;
+    /* 文本居中 */
+    margin-top: 0.5rem;
+    /* 增加與上方圖片的間距 */
     margin-bottom: 1.5rem;
+    background-color: transparent;
+    /* 移除可能導致橘色背景的背景色 */
+    padding: 0;
+    /* 移除可能導致偏離的內邊距 */
 }
 
-/* --- 公文照片區塊最終修正 --- */
+/* --- 公文照片區塊 --- */
 .official-docs-toggle {
     display: flex;
     align-items: center;
