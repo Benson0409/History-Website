@@ -120,14 +120,10 @@ body {
     padding: 0;
     margin-top: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
 }
 
-/* 修正: 移除 .entry-detail.show 類別的 max-height，讓它由 JS 動態設定 */
 .entry-detail.show {
+    max-height: 800px;
     opacity: 1;
     transform: scaleY(1);
     padding: 1.5rem;
@@ -152,7 +148,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* --- 公文照片區塊最終修正 --- */
+/* --- 公文照片區塊最終修正 (無動畫版) --- */
 .official-docs-toggle {
     display: flex;
     align-items: center;
@@ -181,20 +177,18 @@ body {
 }
 
 .official-docs-content {
-    max-height: 0;
-    overflow: hidden;
+    /* 修正: 移除所有過渡效果 */
+    display: none;
     padding: 0;
-    opacity: 0;
-    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
     border-left: 3px solid #ccc;
     margin-top: 0.5rem;
     text-align: center;
 }
 
-/* 修正: 移除 .official-docs-content.show 類別的 max-height，讓它由 JS 動態設定 */
 .official-docs-content.show {
+    /* 修正: 僅在有 .show 類別時才顯示 */
+    display: block;
     padding: 15px;
-    opacity: 1;
 }
 
 .official-docs-content img {

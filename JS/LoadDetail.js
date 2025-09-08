@@ -116,34 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-// 修正後的 toggleDetail 函式，動態計算高度
-function toggleDetail(id) {
-    const el = document.getElementById(id);
-    const entry = el.closest(".timeline-entry");
-
-    if (el && entry) {
-        const willShow = !el.classList.contains("show");
-
-        if (willShow) {
-            el.style.maxHeight = 'none';
-            const scrollHeight = el.scrollHeight;
-            el.style.maxHeight = '0px';
-
-            setTimeout(() => {
-                el.style.maxHeight = scrollHeight + 'px';
-                el.classList.add("show");
-                entry.classList.add("active");
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 10);
-        } else {
-            el.style.maxHeight = '0px';
-            el.classList.remove("show");
-            entry.classList.remove("active");
-        }
-    }
-}
-
-// 修正後的 toggleOfficialDocs 函式，動態計算高度
+// 最終修正後的 toggleOfficialDocs 函式 (無動畫版)
 function toggleOfficialDocs(id) {
     const el = document.getElementById(id);
     const toggleButton = el.previousElementSibling;
@@ -152,21 +125,14 @@ function toggleOfficialDocs(id) {
     if (el && toggleIcon) {
         const isShowing = el.classList.contains('show');
 
+        el.classList.toggle('show');
+        toggleButton.classList.toggle('active', !isShowing);
+
         if (isShowing) {
-            el.style.maxHeight = '0px';
-            el.classList.remove('show');
             toggleIcon.textContent = '▼';
         } else {
-            el.style.maxHeight = 'none';
-            const scrollHeight = el.scrollHeight;
-            el.style.maxHeight = '0px';
-
-            setTimeout(() => {
-                el.style.maxHeight = scrollHeight + 'px';
-                el.classList.add('show');
-                toggleIcon.textContent = '▲';
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 10);
+            toggleIcon.textContent = '▲';
+            toggleButton.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 }
