@@ -123,7 +123,8 @@ body {
 }
 
 .entry-detail.show {
-    max-height: 800px;
+    max-height: none;
+    /* 修正: 移除 max-height 限制 */
     opacity: 1;
     transform: scaleY(1);
     padding: 1.5rem;
@@ -148,7 +149,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* --- 公文照片區塊最終修正 (無動畫版) --- */
+/* --- 公文照片區塊最終修正 --- */
 .official-docs-toggle {
     display: flex;
     align-items: center;

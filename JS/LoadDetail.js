@@ -116,6 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
+// 最終修正後的 toggleDetail 函式 (無動畫版)
+function toggleDetail(id) {
+    const el = document.getElementById(id);
+    const entry = el.closest(".timeline-entry");
+    if (el && entry) {
+      const willShow = !el.classList.contains("show");
+      el.classList.toggle("show");
+      entry.classList.toggle("active", willShow);
+  
+      if (willShow) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+}
+
 // 最終修正後的 toggleOfficialDocs 函式 (無動畫版)
 function toggleOfficialDocs(id) {
     const el = document.getElementById(id);
