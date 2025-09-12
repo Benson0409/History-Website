@@ -52,6 +52,8 @@
       "summary_content": "深具歷史及建築風貌特色價值的經典建築物--本校大禮堂。",
       "detail_content": "臺北市政府市政會議通過-本校大禮堂「深具歷史及建築風貌特色價值的經典建築物」指定為臺北市第142處市定古蹟。",
       "image": ["../img/F1.jpg"],
+      "image2": "../img/4.jpg",
+      "image3": "../img/5..jpg",
       "image_caption": ["經典建築物--本校大禮堂"]
     }
   ],
@@ -80,7 +82,7 @@
       "summary_title": "「2010生命教育與健康促進國際學術研討會」",
       "summary_content": "善生與善終，讓生命意義無限延伸。",
       "detail_content": "「2010生命教育與健康促進國際學術研討會」於本校國際會議廳及學生活動中心舉行，共分5個場次，參與人數超過800人次，計有來自美國、加拿大、中國、香港、澳門及台灣各地學者與實務工作者共同與會，將善生與善終的主題發揮得淋漓盡致，並引發後續學習研討的動機，讓生命意義無限延伸。",
-      "image": ["../img/H1.jpg"],
+      "image": ["../img/I1.jpg","../img/I2.jpg"],
       "image_caption": [" "]
     },
     {
@@ -110,6 +112,7 @@
       "image": ["../img/N1-1.jpg"],
       "image2": "../img/N1.jpg",
       "image3": "../img/N4校史文物展.jpg",
+      "image4": "../img/14-1020110017_page-0001.jpg",
       "image_caption": [" "," "," "]
     },
     {
@@ -201,7 +204,7 @@
       "image4": "../img/W4.jpg",
       "image5": "../img/W5.jpg",
       "image6": "../img/W6.jpg",
-      "image_caption": [" "," "," "," "," "," "]
+      "image_caption": ["1896~1927","1927~1945","1945~1960","1961~1987","1961~2005","2005~至今"]
     }
   ],
   "榮耀": [
@@ -263,7 +266,7 @@
       "summary_content": "本校新任校長陳慶和教授就任暨一級主管佈達典禮。",
       "detail_content": "本校新任校長陳慶和教授在教育部潘文忠部長的監交下由前校長張新仁教授手中接過學校印信。",
       "image": ["../img/Ac6.jpg"],
-      "image2": "../img/A29-1090014135_1.jpg",
+      "image2": "../img/29-1090014135.jpg",
       "image_caption": [" "," "]
     },
     {
@@ -272,8 +275,8 @@
       "summary_content": "蔡英文總統親臨「不朽的青春-臺灣美術再發現」展覽",
       "detail_content": "蔡英文總統在陳慶和校長陪同下，聆聽日本修復師森純一先生解說修復《少女》胸象的心得",
       "image": ["../img/Ad1.jpg"],
-      "image2": "../img/Ad3.jpg",
-      "image3": "../img/Ad7.jpg",
+      "image2": "../img/Ad2.jpg",
+      "image3": "../img/Ad7海報.jpg",
       "image_caption": [" "," "," "]
     },
     {
@@ -290,17 +293,16 @@
       "summary_title": "本校男子甲組排球隊勇奪校史大專盃排球一級首冠。",
       "summary_content": "十年磨一劍、逆轉賽事",
       "detail_content": "本校男排一舉奪冠，於場中接受歡呼",
-      "image": ["../img/Ag3.jpg"],
-      "image_caption": [" "]
+      "image": ["../img/Ag3.jpg","../img/Ag4.jpg"],
+      "image_caption": [" ",""]
     },
     {
       "year": "2021.8.25",
       "summary_title": "「卓越隆遠講堂」掛牌",
       "summary_content": "隆遠集團莊子華董事長慨捐新臺幣800萬元挹注本校創新永續發展",
       "detail_content": "期盼國北教大培育出以莊董事長為榜樣的卓越領袖人才，更盼莊董事長的仁風義舉持續澤被國北教大，支持國北教大「創新永續」及「隆盛久遠」。",
-      "image": ["../img/Ah1.jpg"],
-      "image2": "../img/Ah2.jpg",
-      "image3": "../img/Ah3.jpg",
+      "image": ["../img/IMG_7867.jpg"],
+      "image2": "../img/Ah3.jpg",
       "image_caption": [" "," "," "]
     },
     {
@@ -313,16 +315,6 @@
       "image_caption": [" "," "]
     },
     {
-      "year": "2023.3.3",
-      "summary_title": "大浦精一校長家族來訪，再締校史研究交流佳話",
-      "summary_content": "訪本校參觀校史館，見證歷史的演進。",
-      "detail_content": "現年92歲的大浦武彥教授携家族中兒孫輩來臺重遊兒時舊地，並訪本校參觀校史館，追尋父親昔日足跡，並見證歷史的演進。",
-      "image": ["../img/Ap1.jpg"],
-      "image2": "../img/Ap2.jpg",
-      "image3": "../img/Ap4.jpg",
-      "image_caption": [" "," "," "]
-    },
-    {
       "year": "2022.3.14",
       "summary_title": "蔡英文總統親臨「光-臺灣文化的啟蒙與自覺」展覽。",
       "summary_content": "北師美術館展出「光-臺灣文化的啟蒙與自覺」",
@@ -330,8 +322,7 @@
       "image": ["../img/Ak1.jpg"],
       "image2": "../img/Ak2.jpg",
       "image3": "../img/Ak5.jpg",
-      "image4": "../img/Ak6.jpg",
-      "image_caption": [" "," "," "," "]
+      "image_caption": [" "," "," "]
     },
     {
       "year": "2022.3.28",
@@ -349,6 +340,16 @@
       "image": ["../img/Al3.jpg"],
       "image2": "../img/Al4.jpg",
       "image3": "../img/38-1110110126_page-0001.jpg",
+      "image_caption": [" "," "," "]
+    },
+     {
+      "year": "2023.3.3",
+      "summary_title": "大浦精一校長家族來訪，再締校史研究交流佳話",
+      "summary_content": "訪本校參觀校史館，見證歷史的演進。",
+      "detail_content": "現年92歲的大浦武彥教授携家族中兒孫輩來臺重遊兒時舊地，並訪本校參觀校史館，追尋父親昔日足跡，並見證歷史的演進。",
+      "image": ["../img/Ap1.jpg"],
+      "image2": "../img/Ap2.jpg",
+      "image3": "../img/Ap4.jpg",
       "image_caption": [" "," "," "]
     },
     {
@@ -403,8 +404,7 @@
       "summary_content": "校慶植樹觀禮活動",
       "detail_content": "透過親手栽種綠意，傳遞永續理念，讓校園充滿生機與希望！",
       "image": ["../img/Aw1.jpg"],
-      "image2": "../img/Aw2.jpg",
-      "image_caption": [" "," "]
+      "image_caption": [" "]
     }
   ]
 }

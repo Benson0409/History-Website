@@ -7,26 +7,43 @@
 
 body {
     font-family: "Noto Sans TC", sans-serif;
-    background-color: #FAFAFA;
     color: #333;
     display: flex;
-    /* 使用 Flexbox 佈局 */
     flex-direction: column;
-    /* 垂直排列子元素 */
     min-height: 100vh;
-    /* 確保 body 至少佔滿整個視窗的高度 */
+    background-image: url('../img/background_timeline.jpg');
+    /* 替換為你的圖片路徑 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 半透明白色疊加層 */
+    z-index: -1;
 }
 
 /* 確保主要的內容區可以彈性伸展 */
-.home-main,
-.timeline-main,
-.detail-container {
+.timeline-main {
     flex-grow: 1;
-    /* 讓內容區塊彈性成長，將 footer 推到最下方 */
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 1.5rem;
 }
+
 /* Header & Navigation */
 .site-header {
-    background-color: #F57C00;
+    background-color: rgba(245, 124, 0, 0.8);
+    /* 橘色半透明背景 */
     color: white;
     padding: 2rem 1rem 1rem;
     text-align: center;
@@ -91,13 +108,6 @@ body {
     color: #F57C00;
 }
 
-/* Main Layout */
-.timeline-main {
-    max-width: 960px;
-    margin: auto;
-    padding: 2rem 1.5rem;
-}
-
 /* 搜尋欄 */
 .timeline-nav {
     margin-bottom: 2rem;
@@ -110,21 +120,26 @@ body {
     padding: 1rem 1.2rem;
     font-size: 1.1rem;
     border: 2px solid #F57C00;
+    /* 修正: 搜尋框邊框設為橘色 */
     border-radius: 50px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 修正: 搜尋框背景設為半透明 */
 }
 
 #search-input:focus {
     outline: none;
     box-shadow: 0 0 10px #F57C00;
+    /* 修正: 聚焦陰影設為橘色 */
 }
 
 /* 卡片列表 */
 .timeline-card {
     display: flex;
     flex-direction: row;
-    background-color: #fff3e0;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 半透明白色背景 */
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -151,6 +166,9 @@ body {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
     color: #BF360C;
+    border-bottom: 2px solid #F57C00;
+    /* 修正: 卡片標題下底線設為橘色 */
+    padding-bottom: 0.25rem;
 }
 
 .card-content p {
@@ -162,23 +180,28 @@ body {
     display: inline-block;
     margin-top: 0.8rem;
     text-decoration: none;
-    color: #F57C00;
+    background-color: #F57C00;
+    /* 修正: 連結背景設為橘色 */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .card-content a:hover {
-    text-decoration: underline;
+    background-color: #E65100;
+    /* 修正: 懸停時顏色加深 */
 }
 
 /* Footer */
 .site-footer {
-    background-color: #424242;
+    background-color: rgba(51, 51, 51, 0.8);
     color: white;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
     margin-top: auto;
-    /* 將 footer 推到 Flexbox 容器的底部 */
 }
 
 /* 回頂部按鈕 */
@@ -250,7 +273,7 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: white;
+        background-color: #e06600;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         visibility: hidden;
         opacity: 0;

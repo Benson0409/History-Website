@@ -5,152 +5,147 @@
     padding: 0;
 }
 
-/* 確保主要的內容區可以彈性伸展 */
-.home-main,
-.timeline-main,
-.detail-container {
-    flex-grow: 1;
-    /* 讓內容區塊彈性成長，將 footer 推到最下方 */
-}
-
 body {
     font-family: "Noto Sans TC", sans-serif;
-    background-color: #FAFAFA;
     color: #333;
-    display: flex;
-    /* 使用 Flexbox 佈局 */
-    flex-direction: column;
-    /* 垂直排列子元素 */
-    min-height: 100vh;
-    /* 確保 body 至少佔滿整個視窗的高度 */
+    line-height: 1.6;
+    margin: 0;
+    /* --- 新增或修改以下背景圖片相關樣式 --- */
+    background-image: url('../img/1.jpg');
+    /* 替換為你的圖片路徑 */
+    background-size: cover;
+    /* 讓背景圖片覆蓋整個視窗 */
+    background-position: center;
+    /* 圖片置中 */
+    background-attachment: fixed;
+    /* 背景圖片固定，捲動時不移動 */
+    background-repeat: no-repeat;
+    /* 不重複背景圖片 */
+    /* --- 確保文字在背景圖上可讀，可以增加一個半透明的疊加層 --- */
+    position: relative;
+    /* 為了疊加層定位 */
 }
 
-/* Header */
+/* 如果背景圖上文字可讀性不佳，可以添加一個半透明疊加層 */
+body::before {
+    content: '';
+    position: fixed;
+    /* 固定疊加層 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* 白色半透明疊加層，可調整透明度 */
+    z-index: -1;
+    /* 確保在內容下方 */
+}
+
+/* Header Styles */
 .site-header {
-    background-color: #F57C00;
-    color: white;
+    background-color: #fff3e0;
     padding: 2rem 1rem;
     text-align: center;
-    animation: fadeInDown 1s ease-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .logo {
-    width: 80px;
+    max-width: 150px;
+    height: auto;
     margin-bottom: 1rem;
-    animation: popIn 1s ease-out;
 }
 
 .logo-title {
+    color: #F57C00;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Main */
+.site-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Main Content Styles */
 .home-main {
-    padding: 3rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    max-width: 960px;
-    margin: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .section-block {
-    background-color: #fff3e0;
-    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 半透明白色背景 */
     border-radius: 10px;
-    width: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    animation: fadeIn 1s ease;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    /* 增加毛玻璃效果，提升背景層次感 */
 }
 
 .section-block h2 {
-    color: #F57C00;
-    font-size: 1.6rem;
+    color: #BF360C;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
+    border-bottom: 2px solid #F57C00;
+    padding-bottom: 0.5rem;
 }
 
 .section-block p {
     font-size: 1rem;
-    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
-/* Button */
 .start-btn {
     display: inline-block;
     background-color: #F57C00;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 1.5rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
 }
 
 .start-btn:hover {
-    background-color: #e06600;
+    background-color: #E65100;
 }
 
-/* Footer */
+/* Footer Styles */
 .site-footer {
-    background-color: #424242;
+    background-color: rgba(51, 51, 51, 0.8);
+    /* 半透明深色背景 */
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: auto;
-    /* 將 footer 推到 Flexbox 容器的底部 */
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes popIn {
-    0% {
-        transform: scale(0.6);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* RWD */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    .site-header {
+        padding: 1.5rem 1rem;
+    }
+
     .logo-title {
         font-size: 2rem;
+    }
+
+    .site-header p {
+        font-size: 1rem;
     }
 
     .section-block {
         padding: 1.5rem;
     }
 
-    .start-btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
+    .section-block h2 {
+        font-size: 1.5rem;
     }
 }
