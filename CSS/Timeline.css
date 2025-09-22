@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../img/background_timeline.jpg');
+    background-image: url('../img/1.jpg');
     /* 替換為你的圖片路徑 */
     background-size: cover;
     background-position: center;
@@ -42,7 +42,7 @@ body::before {
 
 /* Header & Navigation */
 .site-header {
-    background-color: rgba(245, 124, 0, 0.8);
+    background-color: rgba(245, 124, 0);
     /* 橘色半透明背景 */
     color: white;
     padding: 2rem 1rem 1rem;

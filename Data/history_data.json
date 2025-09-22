@@ -120,7 +120,7 @@
       "summary_title": "本校創校第一金：體育系文姿云勇奪亞運空手道金牌",
       "summary_content": "體育系文姿云勇奪亞運空手道金牌，為本校創校119年第一位獲此殊榮的運動員",
       "detail_content": "文姿云同學締造本校創校第一金殊榮，本校師長一同豎起大姆指為文姿云喝采！",
-      "image": [],
+      "image": ["../img/O4.jpg"],
       "image_caption": [" "]
     },
     {
@@ -234,7 +234,7 @@
       "summary_title": "疫情來襲，嚴陣以待",
       "summary_content": "新冠疫情來襲，攜手防疫",
       "detail_content": "因應新冠疫情，本校全面啟動防疫機制",
-      "image": ["../img/Z2.jpg"],
+      "image": ["../img/Z1.jpg"],
       "image2": "../img/Z3.jpg",
       "image3": "../img/26-1090010104_1.jpg",
       "image4": "../img/26-1090010697_1.jpg",
@@ -312,6 +312,7 @@
       "detail_content": "為支持母校培育菁英學子及為國家社會培育兼具專業能力與品格的頂尖人才，捐贈新臺幣2000萬元於校創設「若竹菁英學苑」。",
       "image": ["../img/Ai1.jpg"],
       "image2": "../img/Ai4.jpg",
+      "image3": "../img/Ai5.jpg",
       "image_caption": [" "," "]
     },
     {
@@ -378,6 +379,7 @@
       "image": ["../img/As1.jpg"],
       "image2": "../img/As2.jpg",
       "image3": "../img/As3.jpg",
+      "image4": "../img/7996.jpg",
       "image_caption": [" "," "," "]
     },
     {
@@ -399,6 +401,16 @@
       "image_caption": [" "," "]
     },
     {
+      "year": "2025.1.9",
+      "summary_title": "臺灣第一個國際和平中心揭牌啟用",
+      "summary_content": "國立臺北教育大學與國際扶輪社共同推動全球和平與永續發展~",
+      "detail_content": "推動全球和平與永續發展~！",
+      "image": ["../img/9787.jpg"],
+      "image2": "../img/9788.jpg",
+      "image3": "../img/9789.jpg",
+      "image_caption": [" "]
+    },
+     {
       "year": "2025.3.25",
       "summary_title": "讓生命延續，為球添綠！",
       "summary_content": "校慶植樹觀禮活動",
