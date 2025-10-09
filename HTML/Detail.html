@@ -26,7 +26,7 @@
     <button id="back-to-top" onclick="scrollToTop()">↑ 回頂部</button>
 
     <script>
-        fetch("../function/Nav.html")
+        fetch("../Function/Nav.html")
             .then(res => res.text())
             .then(data => {
                 document.getElementById("nav-placeholder").innerHTML = data;
