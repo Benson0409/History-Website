@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         officialDocsHTML = `
                             <div class="official-docs-toggle" onclick="toggleOfficialDocs('${entryId}-docs')">
-                                <span class="docs-toggle-text">相關公文查閱</span>
+                                <span class="docs-toggle-text">相關照片及公文查閱</span>
                                 <span class="docs-toggle-icon">▼</span>
                             </div>
                             <div class="official-docs-content" id="${entryId}-docs">
