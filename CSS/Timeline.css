@@ -11,53 +11,55 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    /* 背景圖片設定 */
     background-image: url('../img/bg.jpg');
-    /* 替換為你的圖片路徑 */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
+    line-height: 1.8;
+    /* 增加整體行高 */
 }
-
-/* body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: -1;
-} */
 
 /* 確保主要的內容區可以彈性伸展 */
 .timeline-main {
     flex-grow: 1;
-    max-width: 960px;
+    max-width: 1000px;
     margin: auto;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
 }
 
 /* Header & Navigation */
 .site-header {
-    background-color: rgba(245, 124, 0);
-    /* 橘色半透明背景 */
+    /* --- 核心修正：改為實心不透明橘色，並移除陰影 --- */
+    background-color: #F57C00;
+    box-shadow: none;
+    /* 移除陰影，與 Detail 頁面一致 */
+    /* ------------------------------------------- */
     color: white;
-    padding: 2rem 1rem 1rem;
+    /* padding: 3rem 1.5rem 1.5rem; */
     text-align: center;
     position: relative;
 }
 
 .logo {
     width: 80px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     animation: popIn 1s ease-out;
 }
 
 .logo-title {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.site-header p {
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
 }
 
 .menu-toggle {
@@ -78,7 +80,7 @@ body {
 .nav-menu {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     background-color: transparent;
     position: static;
     box-shadow: none;
@@ -95,123 +97,121 @@ body {
 
 .nav-menu a {
     display: block;
-    padding: 1rem;
+    padding: 1.2rem 0.5rem;
     border-bottom: 1px solid #eee;
     text-decoration: none;
-    color: #333;
+    color: #fff3e0;
     font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
 .nav-menu a:hover {
-    background-color: #fff3e0;
-    color: #F57C00;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 3px solid #fff;
 }
 
-/* 搜尋欄 */
+/* 搜尋欄 (保持不變) */
 .timeline-nav {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 #search-input {
-    width: 60%;
-    max-width: 400px;
-    padding: 1rem 1.2rem;
-    font-size: 1.1rem;
-    border: 2px solid #F57C00;
-    /* 修正: 搜尋框邊框設為橘色 */
+    width: 70%;
+    max-width: 600px;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.2rem;
+    border: 3px solid #F57C00;
     border-radius: 50px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* 修正: 搜尋框背景設為半透明 */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 #search-input:focus {
     outline: none;
-    box-shadow: 0 0 10px #F57C00;
-    /* 修正: 聚焦陰影設為橘色 */
+    box-shadow: 0 0 15px #F57C00;
 }
 
-/* 卡片列表 */
+/* 卡片列表 (保持不變) */
 .timeline-card {
     display: flex;
     flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* 半透明白色背景 */
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     transition: transform 0.3s ease;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .timeline-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .timeline-card img {
-    width: 160px;
+    width: 250px;
     height: auto;
     object-fit: cover;
 }
 
 .card-content {
-    padding: 1.5rem;
+    padding: 2.5rem;
 }
 
 .card-content h3 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     color: #BF360C;
-    border-bottom: 2px solid #F57C00;
-    /* 修正: 卡片標題下底線設為橘色 */
-    padding-bottom: 0.25rem;
+    border-bottom: 3px solid #F57C00;
+    padding-bottom: 0.5rem;
 }
 
 .card-content p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
 .card-content a {
     display: inline-block;
-    margin-top: 0.8rem;
+    margin-top: 1.5rem;
     text-decoration: none;
     background-color: #F57C00;
-    /* 修正: 連結背景設為橘色 */
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .card-content a:hover {
     background-color: #E65100;
-    /* 修正: 懸停時顏色加深 */
 }
 
-/* Footer */
+/* Footer (保持不變) */
 .site-footer {
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 2rem;
+    font-size: 1rem;
     margin-top: auto;
 }
 
-/* 回頂部按鈕 */
+/* 回頂部按鈕 (保持不變) */
 #back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
     background-color: #F57C00;
     color: white;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -225,7 +225,7 @@ body {
     background-color: #e06600;
 }
 
-/* 動畫 */
+/* 動畫 (保持不變) */
 @keyframes popIn {
     0% {
         transform: scale(0.6);
@@ -238,55 +238,72 @@ body {
     }
 }
 
-/* RWD */
+/* RWD (保持不變) */
+@media (max-width: 1024px) {
+    .timeline-main {
+        max-width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
+
+    /* 修正 RWD 選單樣式，使其更易讀 */
+    .nav-menu {
+        gap: 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 1rem;
+        color: #333;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-menu a:hover {
+        background-color: #fff3e0;
+        color: #F57C00;
+        border-bottom: 1px solid #F57C00;
+    }
+
+    .site-header {
+        padding: 2rem 1rem;
+    }
+
+    .logo-title {
+        font-size: 2.5rem;
+    }
+
     .timeline-card {
         flex-direction: column;
         text-align: center;
     }
 
     .timeline-card img {
-        width: 80%;
-        max-width: 300px;
-        margin: 0 auto;
-        height: auto;
+        width: 90%;
+        max-width: 400px;
+        margin: 1.5rem auto 0.5rem;
     }
 
     .card-content {
-        padding: 1rem;
+        padding: 1.5rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .card-content p {
+        font-size: 1.05rem;
     }
 
     #search-input {
-        width: 80%;
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .card-content a {
+        padding: 0.7rem 1.4rem;
         font-size: 1rem;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #e06600;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        transition: visibility 0.3s, opacity 0.3s ease;
-    }
-
-    .nav-menu.show {
-        visibility: visible;
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .nav-menu a {
-        color: #333;
     }
 }

@@ -9,96 +9,108 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     background-color: #FAFAFA;
     color: #333;
+    line-height: 1.7;
+    /* 增加行高 */
 }
 
 /* Detail Page Containers */
 .detail-container {
-    max-width: 960px;
+    max-width: 1000px;
+    /* 放大主內容區塊寬度 */
     margin: auto;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
+    /* 放大內邊距 */
 }
 
 /* Section Title */
 .section-title {
     text-align: center;
     color: #F57C00;
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    /* 放大標題 */
+    margin-bottom: 3rem;
 }
 
 /* Timeline Layout */
 .timeline-line-wrapper {
     position: relative;
-    padding-left: 30px;
+    padding-left: 40px;
+    /* 放大行線間距 */
     border-left: 4px solid #F57C00;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 /* Timeline Entry */
 .timeline-entry {
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    /* 放大區塊間距 */
     background: linear-gradient(to right, #fff3e0, #ffe0b2);
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 1.5rem;
+    padding: 2rem;
+    /* 放大內邊距 */
 }
 
 .timeline-entry:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-entry::before {
     content: '';
     position: absolute;
-    left: -14px;
-    top: 1.2rem;
-    width: 14px;
-    height: 14px;
+    left: -19px;
+    top: 1.5rem;
+    width: 18px;
+    /* 放大圓點 */
+    height: 18px;
     background-color: #F57C00;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px #fff3e0;
+    box-shadow: 0 0 0 5px #fff3e0;
 }
 
 /* Year Badge */
 .year-badge {
     position: absolute;
-    left: -65px;
-    top: 0.9rem;
+    left: -75px;
+    top: 1.3rem;
     background-color: #F57C00;
     color: white;
-    padding: 4px 10px;
-    font-size: 0.85rem;
-    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 1rem;
+    /* 放大文字 */
+    border-radius: 6px;
     font-weight: bold;
     white-space: nowrap;
 }
 
 /* Text Styles */
 .timeline-entry h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     color: #BF360C;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    /* 放大標題 */
 }
 
 .timeline-entry p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    /* 放大內文 */
+    line-height: 1.7;
 }
 
 /* Entry Toggle */
 .entry-toggle {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     cursor: pointer;
 }
 
 .entry-toggle::after {
     content: "▾";
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     transition: transform 0.3s ease;
     margin-left: auto;
     color: #F57C00;
@@ -108,52 +120,44 @@ body {
     transform: rotate(180deg);
 }
 
-/* Entry Detail (主內容區塊，無最大高度限制，無動畫) */
+/* Entry Detail (主內容區塊) */
 .entry-detail {
-    /* 移除所有動畫和限制，確保內容完整顯示 */
     display: none;
-    /* 預設隱藏 */
     padding: 0;
     margin-top: 0;
     background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .entry-detail.show {
     display: block;
-    /* 展開時直接顯示 */
-    padding: 1.5rem;
-    margin-top: 1rem;
+    padding: 2rem;
+    /* 放大內邊距 */
+    margin-top: 1.5rem;
 }
 
 /* --- 照片大小與置中修正 --- */
 .entry-detail .main-image {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-top: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
     display: block;
-    /* 確保圖片是塊級元素以實現居中 */
     margin-left: auto;
-    /* 圖片居中 */
     margin-right: auto;
-    /* 圖片居中 */
 }
 
 /* 確保圖片註解在圖片下方且居中 */
 .image-caption {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    /* 放大註解文字 */
     color: #555;
     text-align: center;
-    /* 文本居中 */
-    margin-top: 0.5rem;
-    /* 增加與上方圖片的間距 */
-    margin-bottom: 1.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
     background-color: transparent;
-    /* 移除可能導致橘色背景的背景色 */
     padding: 0;
-    /* 移除可能導致偏離的內邊距 */
 }
 
 /* --- 公文照片區塊 --- */
@@ -161,10 +165,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 12px 18px;
+    /* 放大內邊距 */
     background-color: #f0f0f0;
-    border-radius: 8px;
-    margin-top: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -175,35 +180,35 @@ body {
 
 .docs-toggle-text {
     font-weight: bold;
+    font-size: 1.1rem;
     color: #333;
 }
 
 .docs-toggle-icon {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #666;
     transition: transform 0.3s ease;
 }
 
 .official-docs-content {
-    /* 修正: 移除所有過渡效果 */
     display: none;
     padding: 0;
     border-left: 3px solid #ccc;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     text-align: center;
 }
 
 .official-docs-content.show {
-    /* 修正: 僅在有 .show 類別時才顯示 */
     display: block;
-    padding: 15px;
+    padding: 20px;
+    /* 放大內邊距 */
 }
 
 .official-docs-content img {
     max-width: 95%;
     height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -211,7 +216,7 @@ body {
 }
 
 .official-docs-content img:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .doc-item {
@@ -220,24 +225,34 @@ body {
 }
 
 /* 響應式調整 */
+@media (max-width: 1024px) {
+    .detail-container {
+        max-width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .timeline-line-wrapper {
-        padding-left: 20px;
-        border-left-width: 3px;
+        padding-left: 25px;
+        border-left-width: 4px;
     }
 
     .timeline-entry::before {
-        left: -11px;
-        width: 10px;
-        height: 10px;
+        left: -14px;
+        width: 14px;
+        height: 14px;
     }
 
     .year-badge {
         left: -58px;
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 
     .timeline-entry {
-        padding: 1rem;
+        padding: 1.5rem;
+    }
+
+    .timeline-entry p {
+        font-size: 1.1rem;
     }
 }
