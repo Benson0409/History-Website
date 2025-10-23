@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const themeData = data[theme];
 
             if (themeData) {
-                detailPageTitle.textContent = `${theme}｜主題詳細頁`;
+                detailPageTitle.textContent = `${theme}｜陳展內容`;
                 timelineContent.innerHTML = '';
 
                 themeData.forEach((entry, index) => {
